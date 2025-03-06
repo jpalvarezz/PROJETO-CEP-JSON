@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto CEP com JSON</title>
+    <style>
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .buscar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; 
+            margin-top: 20px;
+        }
+
+
+        @media (max-width: 600px) {
+            .buscar {
+                flex-direction: column;
+            }
+        }
+
+
+        .buscar input {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px; 
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+        .buscar button {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .buscar button:hover {
+            background-color: #0056b3;
+        }
+
+
+        #text {
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>JSON CEP</h1>
+
+    <div class="buscar">
+        <input id="cep" type="text" placeholder="Digite seu CEP">
+        <button onclick="buscarCep()" type="button">Buscar</button>
+    </div>
+    <div id="text">
+        <p id="texto"></p>
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
